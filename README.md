@@ -9,19 +9,20 @@ curious as to issues you may face.
 ## Install
 
 ```bash
-bun install
+yarn install
 ```
 
 ## Run
 
 ```bash
-bun run src/index.ts sourceFile.dae outputFile.dae
+ts-node src/index.ts sourceFile.dae outputFile.dae
 ```
 
 ## Build
 
 ```bash
-bun bundle
+yarn build
+node dist/index.js
 ```
 
 # Development Notes

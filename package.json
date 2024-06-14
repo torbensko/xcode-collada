@@ -1,24 +1,22 @@
 {
   "name": "xcode-collada",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "scripts": {
-    "bundle": "bun build --target=node ./src/index.ts --outfile=dist/index.js"
-  },
   "bin": "./dist/index.js",
-  "devDependencies": {
-    "bun-types": "latest"
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts"
   },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+  "devDependencies": {
+    "@types/lodash": "^4.17.4",
+    "@types/node": "^20.14.2",
+    "@types/xml2js": "^0.4.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@types/lodash": "^4.17.4",
-    "@types/xml2js": "^0.4.14",
     "lodash": "^4.17.21",
-    "modify-xml": "^0.2.0",
-    "typescript": "^5.4.5",
     "xml2js": "^0.6.2"
   }
 }

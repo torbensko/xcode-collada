@@ -2,6 +2,7 @@
 
 .*
 !.gitignore
+!.yarnrc.yml
 
 output
 
