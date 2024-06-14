@@ -6,12 +6,22 @@ curious as to issues you may face.
 
 # Usage
 
-```bash
-# install
-bun install
+## Install
 
-# yarn
+```bash
+bun install
+```
+
+## Run
+
+```bash
 bun run src/index.ts sourceFile.dae outputFile.dae
+```
+
+## Build
+
+```bash
+bun bundle
 ```
 
 # Development Notes
