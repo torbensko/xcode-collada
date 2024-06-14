@@ -4,7 +4,19 @@
 can happily load them. The tool will report the issues it is resolving, for those
 curious as to issues you may face.
 
-# Usage
+# External usage
+
+To run from your own project:
+
+```bash
+yarn init
+yarn add xcode-collada
+yarn run xcode-collada sourceFile.dae outputFile.dae
+```
+
+# Development
+
+To run from this project:
 
 ## Install
 
