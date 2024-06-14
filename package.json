@@ -2,9 +2,6 @@
   "name": "xcode-collada",
   "module": "index.ts",
   "type": "module",
-  "scripts": {
-    "start": "bun run index.ts"
-  },
   "devDependencies": {
     "bun-types": "latest"
   },
