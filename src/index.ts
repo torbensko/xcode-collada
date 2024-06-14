@@ -120,23 +120,6 @@ if (libraryAnimations.animation.length === 0) {
   libraryAnimations.animation = [animationElement];
 }
 
-// check if geometry is included
-// console.log("Check: no geometry included");
-// if (!collada.library_geometries) {
-//   console.log("> PASS");
-// } else {
-//   console.warn("> removing - please export gemoetry separately");
-//   delete collada.library_geometries;
-// }
-
-// console.log("Check: no controllers included");
-// if (!collada.library_controllers) {
-//   console.log("> PASS");
-// } else {
-//   console.warn("> removing");
-//   delete collada.library_controllers;
-// }
-
 // remove the armiture node, e.g.
 // <library_visual_scenes>
 //   <visual_scene id="Scene" name="Scene">
