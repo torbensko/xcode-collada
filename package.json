@@ -1,7 +1,12 @@
 {
   "name": "xcode-collada",
-  "module": "index.ts",
-  "type": "module",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "bundle": "bun build --target=node ./src/index.ts --outfile=dist/index.js"
+  },
+  "bin": "./dist/index.js",
   "devDependencies": {
     "bun-types": "latest"
   },
@@ -13,6 +18,7 @@
     "@types/xml2js": "^0.4.14",
     "lodash": "^4.17.21",
     "modify-xml": "^0.2.0",
+    "typescript": "^5.4.5",
     "xml2js": "^0.6.2"
   }
 }

@@ -6,15 +6,11 @@ curious as to issues you may face.
 
 # Usage
 
-To install dependencies:
-
 ```bash
+# install
 bun install
-```
 
-To run:
-
-```bash
+# yarn
 bun run src/index.ts sourceFile.dae outputFile.dae
 ```
 

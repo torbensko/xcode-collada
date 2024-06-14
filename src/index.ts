@@ -1,15 +1,14 @@
-import fs, { readFileSync, existsSync, mkdirSync } from "fs";
+import { writeFileSync, readFileSync, existsSync } from "fs";
 import path from "path";
 import xml2js from "xml2js";
-import { write } from "bun";
 import { get } from "lodash";
 import { stringToXmlObject } from "./stringToXmlObject";
 
 // Get the source file path and target file path from command line arguments
-const sourceFilePath = process.argv[2];
-const targetFilePath = process.argv[3];
+const sourceFilePath = process.argv[process.argv.length - 2];
+const targetFilePath = process.argv[process.argv.length - 1];
 
-if (process.argv.length !== 4 || !sourceFilePath || !targetFilePath) {
+if (process.argv.length < 2 || !sourceFilePath || !targetFilePath) {
   console.error("Usage: bun run src/index.js <source-file> <target-file>");
   process.exit(1);
 }
@@ -231,20 +230,10 @@ if (nameChanges.length === 0) {
   console.log(`> FIXED - changed ${nameChanges.length} names`);
 }
 
-// console.log(get(collada, "library_visual_scenes.0.visual_scene.0"));
-
-// DEBUG check the merged count
-// Object.keys(animationElement).forEach((key) => {
-//   console.log(key, animationElement[key].length);
-// });
-
-// Fix 2: avoid spaces in the scene name
-// result.COLLADA.scene[0].instance_visual_scene[0].$.url = "#RootNode";
-
 const xmlObjectToString = (xmlObject: any): string => {
   var builder = new xml2js.Builder();
   return builder.buildObject(xmlObject);
 };
 
 var outputXml = xmlObjectToString(result);
-write(targetFilePath, outputXml);
+writeFileSync(targetFilePath, outputXml);
